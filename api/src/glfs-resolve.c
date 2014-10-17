@@ -1003,3 +1003,12 @@ glfs_create_object (loc_t *loc, struct glfs_object **retobject)
 
 	return 0;
 }
+
+/* From the given glfs_object , we copy the gfid into character buffer */
+void
+extract_gfid_from_glfs_object (struct glfs_object *object, unsigned char *res)
+{
+       GF_ASSERT (res);
+       GF_ASSERT (object);
+       memcpy (res, object->gfid, 16);
+}

@@ -659,6 +659,18 @@ int glfs_posix_lock (glfs_fd_t *fd, int cmd, struct flock *flock) __THROW;
 
 glfs_fd_t *glfs_dup (glfs_fd_t *fd) __THROW;
 
+
 __END_DECLS
+
+struct glfs_file_layout {
+	uint32_t stripe_type;
+	uint64_t stripe_unit;
+	uint32_t devid;
+};
+
+struct ds_handle {
+        unsigned char gfid[16];
+        struct glfs_file_layout layout; /*< Layout information */
+};
 
 #endif /* !_GLFS_H */

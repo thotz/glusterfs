@@ -126,7 +126,6 @@ struct glfs_object {
         inode_t         *inode;
         uuid_t          gfid;
 };
-
 #define DEFAULT_EVENT_POOL_SIZE           16384
 #define GF_MEMPOOL_COUNT_OF_DICT_T        4096
 #define GF_MEMPOOL_COUNT_OF_DATA_T        (GF_MEMPOOL_COUNT_OF_DICT_T * 4)
@@ -222,7 +221,6 @@ int glfs_loc_unlink (loc_t *loc);
 dict_t * dict_for_key_value (const char *name, const char *value, size_t size);
 int glfs_getxattr_process (void *value, size_t size, dict_t *xattr,
 			   const char *name);
-
 /* Sends RPC call to glusterd to fetch required volume info */
 int glfs_get_volume_info (struct glfs *fs);
 

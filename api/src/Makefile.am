@@ -4,7 +4,7 @@ libgfapi_HEADERS = glfs.h glfs-handles.h
 libgfapidir = $(includedir)/glusterfs/api
 
 libgfapi_la_SOURCES = glfs.c glfs-mgmt.c glfs-fops.c glfs-resolve.c \
-	glfs-handleops.c
+	glfs-handleops.c mds.c
 libgfapi_la_LIBADD = $(top_builddir)/libglusterfs/src/libglusterfs.la \
 	$(top_builddir)/rpc/rpc-lib/src/libgfrpc.la \
 	$(top_builddir)/rpc/xdr/src/libgfxdr.la \

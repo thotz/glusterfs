@@ -167,4 +167,15 @@ glfs_h_access (struct glfs *fs, struct glfs_object *object, int mask) __THROW;
 
 __END_DECLS
 
+/*pnfs implementation*/
+
+uint32_t glfs_get_ds_addr (struct glfs *fs, struct glfs_object *object);
+
+int glfs_get_file_layout (struct glfs *fs, struct glfs_object *object,
+                          struct glfs_file_layout *glf);
+
+void
+extract_gfid_from_glfs_object (struct glfs_object *object, unsigned char *res);
+
+
 #endif /* !_GLFS_HANDLES_H */
